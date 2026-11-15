@@ -1,0 +1,154 @@
+
+<b:if cond='data:view.isHomepage'>
+  <div id='ith-home'>
+    <style>
+      #ith-home{font-family:Arial,sans-serif;color:#172033;width:100%;box-sizing:border-box;background:#f7f9fc;padding:25px 15px 40px}
+      #ith-home *{box-sizing:border-box}
+      #ith-home .ith-wrap{max-width:1150px;margin:auto}
+      #ith-home .ith-hero{text-align:center;padding:42px 18px 35px;background:linear-gradient(135deg,#102b50,#176b83);border-radius:20px;color:#fff;margin-bottom:25px}
+      #ith-home .ith-brand{font-size:15px;font-weight:700;letter-spacing:2px;color:#a8e9e7;margin-bottom:12px}
+      #ith-home h1{font-size:clamp(27px,5vw,43px);line-height:1.2;margin:0 0 13px;color:#fff}
+      #ith-home .ith-hero p{font-size:16px;line-height:1.7;max-width:650px;margin:0 auto 22px;color:#e2f2f7}
+      #ith-home .ith-search{display:flex;max-width:570px;margin:auto;background:#fff;border-radius:12px;padding:5px}
+      #ith-home .ith-search input{flex:1;min-width:0;border:0;outline:0;padding:13px;font-size:15px;background:transparent;color:#172033}
+      #ith-home .ith-search button{border:0;border-radius:9px;background:#10a88a;color:#fff;padding:0 20px;font-weight:700;cursor:pointer}
+      #ith-home .ith-section-title{text-align:center;font-size:25px;margin:32px 0 8px;color:#172b46}
+      #ith-home .ith-subtitle{text-align:center;color:#68778b;margin:0 0 22px;font-size:14px}
+      #ith-home .ith-filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:20px 0 25px}
+      #ith-home .ith-filter{border:1px solid #dce4ed;background:#fff;color:#334155;padding:9px 15px;border-radius:30px;cursor:pointer;font-size:13px}
+      #ith-home .ith-filter.active,#ith-home .ith-filter:hover{background:#126b80;color:#fff;border-color:#126b80}
+      #ith-home .ith-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+      #ith-home .ith-card{display:block;text-decoration:none;background:#fff;border:1px solid #e8edf3;border-radius:13px;padding:18px 15px;transition:.2s;min-height:112px}
+      #ith-home .ith-card:hover{transform:translateY(-4px);border-color:#16a085;box-shadow:0 8px 22px #16324d12}
+      #ith-home .ith-icon{font-size:25px;margin-bottom:10px;display:block}
+      #ith-home .ith-card strong{display:block;font-size:14px;color:#20334c;line-height:1.4}
+      #ith-home .ith-card small{display:block;color:#8491a2;font-size:12px;margin-top:5px}
+      #ith-home .ith-empty{text-align:center;padding:30px;color:#718096;display:none;grid-column:1/-1}
+      #ith-home .ith-features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:38px 0}
+      #ith-home .ith-feature{background:#fff;border:1px solid #e8edf3;border-radius:13px;padding:22px;text-align:center}
+      #ith-home .ith-feature span{font-size:28px}
+      #ith-home .ith-feature strong{display:block;margin:10px 0 6px;color:#20334c}
+      #ith-home .ith-feature p{font-size:13px;color:#718096;line-height:1.6;margin:0}
+      #ith-home .ith-about{background:#eaf4f5;border-radius:15px;padding:25px;text-align:center}
+      #ith-home .ith-about h2{margin:0 0 10px;color:#173b50;font-size:22px}
+      #ith-home .ith-about p{max-width:750px;margin:auto;color:#536779;line-height:1.8;font-size:14px}
+      @media(max-width:850px){#ith-home .ith-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+      @media(max-width:600px){#ith-home{padding:12px 10px 30px}#ith-home .ith-hero{padding:32px 13px;border-radius:14px}#ith-home .ith-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#ith-home .ith-card{padding:14px 11px;min-height:105px}#ith-home .ith-features{grid-template-columns:1fr;gap:10px}#ith-home .ith-filter{padding:8px 11px;font-size:12px}#ith-home .ith-section-title{font-size:22px}}
+    </style>
+
+    <div class='ith-wrap'>
+      <section class='ith-hero'>
+        <div class='ith-brand'>IMAGETOOLSHUB</div>
+        <h1>All Your Image Tools in One Place</h1>
+        <p>Free online image tools to resize, compress, convert, edit and optimize your images easily.</p>
+        <div class='ith-search'>
+          <input id='ith-search-input' type='search' placeholder='Search image tools...' aria-label='Search image tools'/>
+          <button type='button' id='ith-search-button'>Search</button>
+        </div>
+      </section>
+
+      <h2 class='ith-section-title'>Explore Our Image Tools</h2>
+      <p class='ith-subtitle'>Choose a tool and get started. Fast, simple and easy to use.</p>
+
+      <div class='ith-filters'>
+        <button class='ith-filter active' data-filter='all' type='button'>All Tools</button>
+        <button class='ith-filter' data-filter='resize' type='button'>Resize &amp; Crop</button>
+        <button class='ith-filter' data-filter='compress' type='button'>Compression</button>
+        <button class='ith-filter' data-filter='convert' type='button'>Converters</button>
+        <button class='ith-filter' data-filter='edit' type='button'>Editing Tools</button>
+        <button class='ith-filter' data-filter='special' type='button'>Special Tools</button>
+      </div>
+
+      <div class='ith-grid' id='ith-tool-grid'>
+        <a class='ith-card' data-category='resize' href='https://imagealltools.blogspot.com/p/image-resizer.html'><span class='ith-icon'>📐</span><strong>Image Resizer</strong><small>Resize images easily</small></a>
+        <a class='ith-card' data-category='compress' href='https://imagealltools.blogspot.com/p/image-compressor.html'><span class='ith-icon'>🗜️</span><strong>Image Compressor</strong><small>Reduce image file size</small></a>
+        <a class='ith-card' data-category='compress' href='https://imagealltools.blogspot.com/p/compress-image-to-20kb.html'><span class='ith-icon'>📦</span><strong>Compress Image to 20KB</strong><small>Target 20KB image size</small></a>
+        <a class='ith-card' data-category='compress' href='https://imagealltools.blogspot.com/p/compress-image-to-50kb.html'><span class='ith-icon'>📦</span><strong>Compress Image to 50KB</strong><small>Target 50KB image size</small></a>
+        <a class='ith-card' data-category='compress' href='https://imagealltools.blogspot.com/p/compress-image-to-100kb.html'><span class='ith-icon'>📦</span><strong>Compress Image to 100KB</strong><small>Target 100KB image size</small></a>
+        <a class='ith-card' data-category='resize' href='https://imagealltools.blogspot.com/p/image-cropper.html'><span class='ith-icon'>✂️</span><strong>Image Cropper</strong><small>Crop your pictures</small></a>
+        <a class='ith-card' data-category='resize' href='https://imagealltools.blogspot.com/p/image-dimension.html'><span class='ith-icon'>📏</span><strong>Image Dimension Changer</strong><small>Change image dimensions</small></a>
+        <a class='ith-card' data-category='resize' href='https://imagealltools.blogspot.com/p/image-aspect-ratio-calculator.html'><span class='ith-icon'>📊</span><strong>Aspect Ratio Calculator</strong><small>Calculate image proportions</small></a>
+
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/jpg-to-png-converter.html'><span class='ith-icon'>🔄</span><strong>JPG to PNG Converter</strong><small>Convert JPG to PNG</small></a>
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/png-to-jpg-converter.html'><span class='ith-icon'>🔄</span><strong>PNG to JPG Converter</strong><small>Convert PNG to JPG</small></a>
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/jpg-to-webp-converter.html'><span class='ith-icon'>🌐</span><strong>JPG to WEBP Converter</strong><small>Convert JPG to WEBP</small></a>
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/webp-to-jpg-converter.html'><span class='ith-icon'>🌐</span><strong>WEBP to JPG Converter</strong><small>Convert WEBP to JPG</small></a>
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/png-to-webp-converter.html'><span class='ith-icon'>🌐</span><strong>PNG to WEBP Converter</strong><small>Convert PNG to WEBP</small></a>
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/svg-to-png-converter.html'><span class='ith-icon'>🖼️</span><strong>SVG to PNG Converter</strong><small>Convert SVG to PNG</small></a>
+        <a class='ith-card' data-category='convert' href='https://imagealltools.blogspot.com/p/heic-to-jpg-converter.html'><span class='ith-icon'>📷</span><strong>HEIC to JPG Converter</strong><small>Convert HEIC to JPG</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-rotator.html'><span class='ith-icon'>↪️</span><strong>Image Rotator</strong><small>Rotate images</small></a>
+
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-flipper.html'><span class='ith-icon'>↔️</span><strong>Image Flipper</strong><small>Flip images horizontally or vertically</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-watermark-maker.html'><span class='ith-icon'>©️</span><strong>Image Watermark Maker</strong><small>Add watermark to images</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-blur-tool.html'><span class='ith-icon'>🌫️</span><strong>Image Blur Tool</strong><small>Blur image areas</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-background-remover.html'><span class='ith-icon'>🪄</span><strong>Background Remover</strong><small>Remove image backgrounds</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-background-changer.html'><span class='ith-icon'>🎨</span><strong>Background Changer</strong><small>Change image backgrounds</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-border-maker.html'><span class='ith-icon'>▣</span><strong>Image Border Maker</strong><small>Add borders to images</small></a>
+        <a class='ith-card' data-category='special' href='https://imagealltools.blogspot.com/p/image-dpi-changer.html'><span class='ith-icon'>🔍</span><strong>Image DPI Changer</strong><small>Change image DPI</small></a>
+        <a class='ith-card' data-category='special' href='https://imagealltools.blogspot.com/p/image-metadata-viewer.html'><span class='ith-icon'>📋</span><strong>Image Metadata Viewer</strong><small>View image information</small></a>
+
+        <a class='ith-card' data-category='special' href='https://imagealltools.blogspot.com/p/image-metadata-remover.html'><span class='ith-icon'>🧹</span><strong>Image Metadata Remover</strong><small>Remove image metadata</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-color-picker.html'><span class='ith-icon'>🎨</span><strong>Image Color Picker</strong><small>Pick colors from images</small></a>
+        <a class='ith-card' data-category='edit' href='https://imagealltools.blogspot.com/p/image-quality-enhancer.html'><span class='ith-icon'>✨</span><strong>Image Quality Enhancer</strong><small>Improve image quality</small></a>
+        <a class='ith-card' data-category='special' href='https://imagealltools.blogspot.com/p/image-upscaler.html'><span class='ith-icon'>🔎</span><strong>Image Upscaler</strong><small>Increase image dimensions</small></a>
+        <a class='ith-card' data-category='special' href='https://imagealltools.blogspot.com/p/passport-size-photo-maker.html'><span class='ith-icon'>🪪</span><strong>Passport Size Photo Maker</strong><small>Create passport-size photos</small></a>
+        <a class='ith-card' data-category='special' href='https://imagealltools.blogspot.com/p/image-to-pdf-converter.html'><span class='ith-icon'>📄</span><strong>Image to PDF Converter</strong><small>Convert images into PDF</small></a>
+
+        <div class='ith-empty' id='ith-empty'>No matching tools found.</div>
+      </div>
+
+      <div class='ith-features'>
+        <div class='ith-feature'><span>⚡</span><strong>Easy to Use</strong><p>Simple tools with an easy-to-understand interface.</p></div>
+        <div class='ith-feature'><span>🔒</span><strong>Browser Processing</strong><p>Many image tasks can be processed directly in your browser.</p></div>
+        <div class='ith-feature'><span>📱</span><strong>Mobile Friendly</strong><p>Use our image tools on phones, tablets and computers.</p></div>
+      </div>
+
+      <section class='ith-about'>
+        <h2>About ImageToolsHub</h2>
+        <p>ImageToolsHub provides useful online image tools in one place. Resize, compress, convert and edit your images with simple tools designed for everyday use.</p>
+      </section>
+    </div>
+
+    <script type='text/javascript'>
+    //<![CDATA[
+    (function(){
+      var root=document.getElementById('ith-home');
+      if(!root)return;
+      var input=root.querySelector('#ith-search-input');
+      var cards=Array.prototype.slice.call(root.querySelectorAll('.ith-card'));
+      var filters=root.querySelectorAll('.ith-filter');
+      var empty=root.querySelector('#ith-empty');
+      var category='all';
+
+      function update(){
+        var term=(input.value||'').toLowerCase().trim();
+        var count=0;
+        cards.forEach(function(card){
+          var matchesCategory=category==='all'||card.getAttribute('data-category')===category;
+          var matchesText=card.textContent.toLowerCase().indexOf(term)!==-1;
+          var show=matchesCategory&&matchesText;
+          card.style.display=show?'block':'none';
+          if(show)count++;
+        });
+        empty.style.display=count?'none':'block';
+      }
+
+      filters.forEach(function(btn){
+        btn.addEventListener('click',function(){
+          filters.forEach(function(item){item.classList.remove('active');});
+          btn.classList.add('active');
+          category=btn.getAttribute('data-filter');
+          update();
+        });
+      });
+
+      input.addEventListener('input',update);
+      root.querySelector('#ith-search-button').addEventListener('click',update);
+      input.addEventListener('keydown',function(e){
+        if(e.key==='Enter')update();
+      });
+    })();
+    //]]>
+    </script>
+  </div>
+</b:if>
